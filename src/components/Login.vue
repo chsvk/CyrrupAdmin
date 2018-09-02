@@ -20,6 +20,8 @@
 import firebase from 'firebase'
 import router from '../router.js'
 import axios from 'axios'
+import 'vue2-toast/lib/toast.css';
+import Toast from 'vue2-toast';
 export default {
  router,
   data(){
@@ -30,12 +32,14 @@ export default {
   },
   methods: {
       login: function(){
+        var vm = this;
       axios.post('https://vapi.cyrrup.com/api/vbb-auth/login/', {
                     "username": this.username,
                     "password": this.password
                 }
             ).then(function(e){
                 firebase.auth().signInWithCustomToken(e.data.token).then(function(e){
+                  vm.$toast("Logged In Succesfully");
                   router.push('/DashBoard');
                 }).catch(function(e){
                     console.log(e.message);

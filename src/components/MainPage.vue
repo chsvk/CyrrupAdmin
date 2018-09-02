@@ -8,13 +8,7 @@
                 <li>Map View</li>
             </ul>
         </nav>
-        <div class="cards">
-            <div class="card">
-                <h2>Trip Analysiss</h2>
-                <div class="dropdown">
-                </div>
-            </div>
-        </div>
+        <router-view></router-view>
     </div>
 </template>
 
@@ -32,7 +26,7 @@ export default {
 }
 
     nav{
-        background: #F37E38;
+        background: #F37E38;    
         padding: 1em;
         position: relative;
         list-style: none;

@@ -5,9 +5,21 @@ import store from './store'
 import VueFire from 'vuefire'
 import firebase from 'firebase/app'
 import 'firebase/firestore'
+import 'vue2-toast/lib/toast.css';
+import Toast from 'vue2-toast';
+import VueProgress from 'vue-progress'
+import VueChartkick from 'vue-chartkick'
+import Chart from 'chart.js'
+Vue.use(VueProgress)
+Vue.use(Toast, {
+    type: 'center',
+    duration: 3000,
+    wordWrap: true,
+    width: '150px'
+});
 
 Vue.config.productionTip = false
-
+Vue.use(VueChartkick, {adapter: Chart})
 Vue.use(VueFire)
 
 firebase.initializeApp({

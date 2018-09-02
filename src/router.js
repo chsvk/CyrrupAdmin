@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import DashBoard from './components/DashBoard.vue'
 import Login from './components/Login.vue'
 import MainPage from './components/MainPage.vue'
+import Overview from './MainPage/Overview.vue'
 
 
 Vue.use(Router)
@@ -18,8 +19,16 @@ export default new Router({
         {
           path: '/',
           name: 'main',
-          component: MainPage
-        }
+          component: MainPage,
+          children: [
+            {
+                path: '/',
+                name: 'MainDash',
+                component: Overview
+            }
+          ]
+        },
+        
       ]
     },
     {

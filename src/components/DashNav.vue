@@ -10,7 +10,11 @@
         </div>
         <div class="user">
             <p>Hello <span>User</span></p>
+            <div class="dropdown">  
             <img @click="logout" src="../assets/dashboard_user_image.png" alt="">
+            <p class="logThis">Logout</p>
+            </div>
+
         </div>
     </div>
 </template>
@@ -18,16 +22,19 @@
 <script>
 import firebase from 'firebase'
 import router from '../router.js'
+import 'vue2-toast/lib/toast.css';
+import Toast from 'vue2-toast';
 export default {
     name: 'DashNav',
     router,
     methods: {
         logout: function(){
+            var vm = this;
             firebase.auth().signOut().then(function() { 
-                // Sign-out successful. 
+                vm.$toast('Succesfully Logged Out');
                 router.push('/');
                 }, function(error) { 
-                    // An error happened. 
+                    
                 });
         }
     }
@@ -77,7 +84,6 @@ export default {
             }
         }
         .user{
-            
             display: grid;
             grid-template-columns: 40% auto;
             p{
