@@ -28,9 +28,6 @@ export default {
         ToggleNav
     },
     methods:{
-        menu: function(){
-            console.log('cl');
-        }
     }
 }
 </script>

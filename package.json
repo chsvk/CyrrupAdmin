@@ -15,6 +15,7 @@
     "vue-progress": "^0.2.1",
     "vue-radial-progress": "^0.2.10",
     "vue-router": "^3.0.1",
+    "vue-spinners": "^1.0.2",
     "vue2-toast": "^2.0.2",
     "vuefire": "^1.4.5",
     "vuex": "^3.0.1"

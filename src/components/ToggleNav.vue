@@ -69,9 +69,9 @@ export default {
         img{
             display: block;
             cursor: pointer;
-            width: 35px;
-            height: 35px;
-            padding: 1.25em;
+            width: 30px;
+            height: 30px;
+            padding: 1.3em;
         }
         .ham{
             background: #252525;

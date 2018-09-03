@@ -64,7 +64,7 @@
                 </div>
                 <hr>
                 <h2><span>{{totalSteps}}</span> Trips This Week</h2>
-                <area-chart   :curve="false" :colors="['#ffeecb']" :data="chartData"></area-chart>
+                <area-chart   :curve="false" :colors="['#ecb956']" :data="chartData"></area-chart>
             </div>
         </div>
 </template>
@@ -138,7 +138,7 @@ export default {
         }
 
         .card:hover{
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
         }
 
         .toolbar{

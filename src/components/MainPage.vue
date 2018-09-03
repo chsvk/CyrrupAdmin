@@ -2,10 +2,10 @@
     <div class="mainPage">
         <nav>
             <ul>
-                <li>Overview</li>
-                <li>Trips</li>
-                <li>Alerts</li>
-                <li>Map View</li>
+                <li><button @click="NavOverview">Overview</button></li>
+                <li><button @click="NavTrips">Trips</button></li>
+                <li><button @click="NavAlerts">Alerts</button></li>
+                <li><button @click="NavMap">Map View</button></li>
             </ul>
         </nav>
         <router-view></router-view>
@@ -13,8 +13,29 @@
 </template>
 
 <script>
+import router from '../router'
 export default {
-
+    router,
+    methods:{
+        NavOverview: function(){
+            router.push('/dashboard');
+        },
+        NavTrips: function(){
+            router.push({
+                name: 'trips'
+            });
+        },
+        NavMap : function(){
+            router.push({
+                name: 'map'
+            })
+        },
+        NavAlerts: function(){
+            router.push({
+                name: 'alerts'
+            })
+        }
+    }
 }
 </script>
 
@@ -31,9 +52,16 @@ export default {
         position: relative;
         list-style: none;
         li{
-           color: white;
-           margin: 0 2em;
             display: inline;
+            margin: 1.2em; 
+            
+            button{
+                border: none;
+                background: none;
+                color: white;
+                font-size: 1em;
+                cursor: pointer;
+            }
         }
     }
 </style>

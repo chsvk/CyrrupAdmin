@@ -4,7 +4,9 @@ import DashBoard from './components/DashBoard.vue'
 import Login from './components/Login.vue'
 import MainPage from './components/MainPage.vue'
 import Overview from './MainPage/Overview.vue'
-
+import Trips from './MainPage/Trips.vue'
+import Alerts from './MainPage/Alerts.vue'
+import MapView from './MainPage/MapView.vue'
 
 Vue.use(Router)
 
@@ -23,8 +25,23 @@ export default new Router({
           children: [
             {
                 path: '/',
-                name: 'MainDash',
+                name: 'overview',
                 component: Overview
+            },
+            {
+              path: 'trips',
+              name: 'trips',
+              component: Trips
+            },
+            {
+              path: 'alerts',
+              name: 'alerts',
+              component: Alerts
+            },
+            {
+              path: 'map',
+              name: 'map',
+              component: MapView
             }
           ]
         },

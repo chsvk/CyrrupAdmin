@@ -10,6 +10,9 @@ import Toast from 'vue2-toast';
 import VueProgress from 'vue-progress'
 import VueChartkick from 'vue-chartkick'
 import Chart from 'chart.js'
+import VueSpinners from 'vue-spinners'
+
+Vue.use(VueSpinners)
 Vue.use(VueProgress)
 Vue.use(Toast, {
     type: 'center',
